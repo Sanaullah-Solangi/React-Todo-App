@@ -1,9 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "poppins";
+  src: url(./assets/Poppins-Regular.ttf);
+}
 
 * {
   text-transform: capitalize !important;
+  font-family: "poppins", sans-serif;
 }
 .todoContainer {
   width: 70%;
@@ -16,7 +21,18 @@
   background-color: rgb(255, 55, 5);
 }
 
-.todoInput:focus{
-border: none;
-outline: none;
+.todoInput:focus {
+  border: none;
+  outline: none;
+}
+@media (width <=710px) {
+  .todoContainer {
+    width: 90%;
+  }
+}
+
+@media (width <=550px) {
+  .todoContainer {
+    width: 97%;
+  }
 }

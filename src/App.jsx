@@ -21,6 +21,12 @@ function App() {
     updateTodosArr([...todosArr, inputValue]);
   };
 
+  const removeTodo = (ind) => {
+    const deletedTodo = todosArr.splice(ind, ind + 1);
+    console.log(deletedTodo);
+    updateTodosArr([...todosArr]);
+  };
+
   return (
     <div className="todoContainer m-auto pb-4 rounded-2xl overflow-hidden">
       {/* HEADER */}
@@ -30,7 +36,13 @@ function App() {
       {/* TODO LIST */}
       <ul>
         {todosArr.map((todo, ind) => {
-          return <ListItem todo={todo} ind={ind} />;
+          return (
+            <ListItem
+              todo={todo}
+              ind={ind}
+              removeTodo={() => removeTodo(ind)}
+            />
+          );
         })}
       </ul>
     </div>
