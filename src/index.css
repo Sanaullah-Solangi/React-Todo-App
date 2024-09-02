@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  text-transform: capitalize !important;
+}
+.todoContainer {
+  width: 70%;
+  height: 80vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.todoHeading,
+.addBtn {
+  background-color: rgb(255, 55, 5);
+}
+
+.todoInput:focus{
+border: none;
+outline: none;
+}
