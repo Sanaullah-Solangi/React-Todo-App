@@ -1,7 +1,10 @@
-function TodoButtons({ removeTodo }) {
+function TodoButtons({ removeTodo, focusOnInputToEditTodo }) {
   return (
     <div className="flex items-center justify-center">
-      <button className="bg-red-400 px-3 py-2 flex items-center justify-center">
+      <button
+        onClick={focusOnInputToEditTodo}
+        className="bg-red-400 px-3 py-2 flex items-center justify-center"
+      >
         <i
           className="fa-solid fa-pen-to-square text-white"
           style={{ fontSize: "20px" }}

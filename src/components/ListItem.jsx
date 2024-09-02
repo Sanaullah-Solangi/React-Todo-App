@@ -1,13 +1,13 @@
 import TodoButtons from "./TodoButtons";
 
-function ListItem({ ind, todo, removeTodo }) {
+function ListItem({ todo, removeTodo, editTodo }) {
   return (
-    <li
-      key={ind}
-      className="text-black text-xl mb-2 flex items-center justify-between pl-2  border border-b-gray-400 rounded-l-xl"
-    >
+    <li className="text-black text-xl mb-2 flex items-center justify-between pl-2  border border-b-gray-400 rounded-l-xl">
       {todo}
-      <TodoButtons removeTodo={removeTodo} />{" "}
+      <TodoButtons
+        removeTodo={removeTodo}
+        focusOnInputToEditTodo={editTodo}
+      />{" "}
     </li>
   );
 }
